@@ -40,7 +40,7 @@ public ArrayList<RegistroMovimiento> recuperarTodos(String idArticulos) throws K
 			throw e;
 		}catch (SQLException e) {
 				e.printStackTrace();
-				throw new KrakedevException("Error al consultar"+e.getMessage());
+				throw new KrakedevException("Error al consultar el articulo"+e.getMessage());
 			}
 		
 		return movimientos;
