@@ -5,11 +5,11 @@ import java.util.Date;
 public class RegistroMovimiento {
 
 	private int id;
-	private Articulo id_articulos;
+	private String id_articulos;
 	private int cantidad;
 	private java.util.Date fecha_movimiento;
 	
-	public RegistroMovimiento(int id, Articulo id_articulos, int cantidad, Date fecha_movimiento) {
+	public RegistroMovimiento(int id, String id_articulos, int cantidad, Date fecha_movimiento) {
 		super();
 		this.id = id;
 		this.id_articulos = id_articulos;
@@ -28,11 +28,11 @@ public class RegistroMovimiento {
 		this.id = id;
 	}
 
-	public Articulo getId_articulos() {
+	public String getId_articulos() {
 		return id_articulos;
 	}
 
-	public void setId_articulos(Articulo id_articulos) {
+	public void setId_articulos(String id_articulos) {
 		this.id_articulos = id_articulos;
 	}
 
