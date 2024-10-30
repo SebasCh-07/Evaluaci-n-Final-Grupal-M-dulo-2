@@ -12,6 +12,9 @@ import javax.ws.rs.core.Response;
 import com.krakedev.EvaluacionGrupal1.entidades.RegistroMovimiento;
 import com.krakedev.EvaluacionGrupal1.exepcion.KrakedevException;
 import com.krakedev.EvaluacionGrupal1.metodos.Consultas;
+import com.krakedev.EvaluacionGrupal1.metodos.EliminarGrupo;
+import com.krakedev.entidades.Cliente;
+import com.krakedev.exepciones.KrakedevExeption;
 
 
 
@@ -26,22 +29,22 @@ public class ServiciosClientes {
 
 
 	
-	@Path("buscarPorCedula/{cedulaParam}")
+	@Path("eliminarGrupo/{idParam}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response buscarPorCedula(@ PathParam("cedulaParam")String cedula) {
-		clietesBDD cli = new clietesBDD();
-		Cliente cliente=null;
+	public Response eliminarGrupo(@ PathParam("idParam")String id)  {
+		EliminarGrupo gru = new EliminarGrupo();
+	
 		
 		try {
-			cliente = cli.buscarPorPK(cedula);
-			return Response.ok(cliente).build();
-		} catch (KrakedevExeption e) {
+			gru.EliminarGrupos(id);
+			return Response.ok("Grupo eliminado").build();
+		} catch (KrakedevException e) {
+			
 			e.printStackTrace();
 			return Response.serverError().build();
-			
-
-		}}
+		}
+		}
 		
 		@Path("consultas/{idParam}")
 		@GET
@@ -60,6 +63,7 @@ public class ServiciosClientes {
 
 			}
 
+			
 	}
 
 	
