@@ -13,8 +13,7 @@ import com.krakedev.EvaluacionGrupal1.entidades.RegistroMovimiento;
 import com.krakedev.EvaluacionGrupal1.exepcion.KrakedevException;
 import com.krakedev.EvaluacionGrupal1.metodos.Consultas;
 import com.krakedev.EvaluacionGrupal1.metodos.EliminarGrupo;
-import com.krakedev.entidades.Cliente;
-import com.krakedev.exepciones.KrakedevExeption;
+
 
 
 
